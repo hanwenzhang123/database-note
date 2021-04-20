@@ -1,5 +1,6 @@
 #echo = True adds info to console when it runs
 #echo = False - clear up the console, it will remove additional messages when running the file
+# session iw always watching
 
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
@@ -27,11 +28,11 @@ class User(Base):
 #     meg_user = User(name='Hanwen', fullname='Hanwen Zhang', nickname='Helen')
 #     print(meg_user.name)  
 #     print(meg_user.id)  #none
-#     session.add(meg_user)
+#     session.add(meg_user)     #add() adds one entry to the database
 #     session.commit()    #this commit add our list to the database
 #     print(session.id)
-    
-    session.add([User(name='Grace', fullname='Grace Hopper', nickname='Pioneer'), 
+                #   add_all() adds multiple entries to a database
+    session.add_all([User(name='Grace', fullname='Grace Hopper', nickname='Pioneer'), 
                 User(name='Alan', fullname='Alan Turing', nickname='Computer Scientist'),  
                 User(name='Katherine', fullname='Katherine Johnson', nickname='') ]   #this can be a variable instead
     session.commit()    #need commit to commit to the session, otherwise nothing saved
