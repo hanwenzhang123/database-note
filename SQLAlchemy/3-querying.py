@@ -26,7 +26,7 @@ for user in models.session.query(models.User.name).order_by(models.User.name)[:2
 for user in models.session.query(models.User.name).order_by(models.User.name)[2:4]: 
   pirnt(user.name) #start from 2 and stop at 4
   
-models.session.query(models.User).all()    #return all the list
+models.session.query(models.User).all()    #return all the list -  all() returns a list of matching entries instead of a tuple.
 models.session.query(models.User).order_by(models.User.name).first()    #return the first user in he list aphabetically
 models.session.query(models.User).filter_by(name='Jethro')  #take keyword document
 models.session.query(models.User).filter_by(models.User.name=='Jethro') #instead of key value pair, here we only focus on jethro
