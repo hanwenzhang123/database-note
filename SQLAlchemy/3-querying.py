@@ -58,6 +58,13 @@ class Movie(Base):
 
 # Create a variable called romance_movies. It should hold all of the movies with a genre of 'Romance'.
 romance_movies = session.query(Movie).filter_by(genre=='Romance')
+
 #Create a variable named all_movies. It should hold all of the movies in the database in alphabetical order.
 all_movies = session.query(Movie).order_by(Movie.movie_title)
 
+# Create a new variable called the_movies that holds a query to find all products with ‘%The%’ in the movie_title and counts the number of returned values. 
+# *Hint:* Use filter() with .like()
+the_movies = session.query(Movie).filter(Movie.movie_title.like('%The%')).count()
+
+
+  
