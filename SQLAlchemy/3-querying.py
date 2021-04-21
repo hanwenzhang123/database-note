@@ -67,4 +67,19 @@ all_movies = session.query(Movie).order_by(Movie.movie_title)
 the_movies = session.query(Movie).filter(Movie.movie_title.like('%The%')).count()
 
 
+
+# Questions
+What would you add to this query to return a list instead of a tuple? 
+session.query(Sales).all()
+
+Which of the following will sort items in the database by year in descending order?
+session.query(Sales).order_by(Sales.year.desc())
+
+You updated an entry to fix a spelling error. What would you call to check that session has picked up this change?
+session.dirty
+
+Chaining function calls is allowed in SQLAlchemy
+session.query(Sales).filter(Sales.year==2015).filter(Sales.price > 5)
   
+
+                                                       
