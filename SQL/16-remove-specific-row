@@ -1,8 +1,9 @@
 SELECT * FROM books WHERE title LIKE 'harry potter%';
-DELETE FROM books where title LIKE 'harry potter%';     --> all 'harry potter%' books are gone
+DELETE FROM books WHERE title LIKE 'harry potter%';     --> all 'harry potter%' books are gone
 
 DELETE FROM patrons WHERE id = 4;   --> data related to id=4 moved
 
+DELETE FROM phone_book WHERE first_name = "Jonathan" AND last_name = "Luna";   --> Delete both entries
 
 To delete specific rows from a table:
 DELETE FROM <table> WHERE <condition>;
