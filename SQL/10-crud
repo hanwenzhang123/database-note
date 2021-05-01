@@ -1,0 +1,7 @@
+Data isn't static, it changes over time. Databases allow you to modify that data over time.
+
+Four Main Data Operations
+Create
+Read
+Update
+Delete
