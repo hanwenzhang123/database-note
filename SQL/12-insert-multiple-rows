@@ -1,0 +1,22 @@
+If you do not want to write the first line of query over and over again, 
+you can state the column, indicate the value in '()', and seperate with a ','
+
+
+Inserting multiple rows in a single statement:
+
+INSERT INTO <table> (<column 1>, <column 2>, ...) 
+             VALUES 
+                    (<value 1>, <value 2>, ...),
+                    (<value 1>, <value 2>, ...),
+                    (<value 1>, <value 2>, ...);
+Examples:
+
+INSERT INTO users (username, first_name, last_name) 
+    VALUES 
+                  ("chalkers", "Andrew", "Chalkley"),
+                  ("ScRiPtKiDdIe", "Kenneth", "Love");
+
+INSERT INTO movies (title, genre, year_released) 
+     VALUES 
+                   ("Starman", "Science Fiction", 1984),
+                   ("Moulin Rouge!", "Musical", 2001);
