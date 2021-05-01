@@ -1,7 +1,7 @@
 Insert the value to the books table
 INSERT INTO books VALUES (16, "1984", "George Orwell", "Fiction", 1949)
 
-When we do not know the ID, we can use NULL to match the pattern
+When we do not know the ID, we can use NULL to match the pattern, The id column is auto incrementing.
 INSERT INTO books VALUES (Null, "1984", "George Orwell", "Fiction", 1949)
 
 When we want to give an empty value, we can use NULL
