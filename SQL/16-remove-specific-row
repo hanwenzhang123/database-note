@@ -1,0 +1,23 @@
+SELECT * FROM books WHERE title LIKE 'harry potter%';
+DELETE FROM books where title LIKE 'harry potter%';     --> all 'harry potter%' books are gone
+
+DELETE FROM patrons WHERE id = 4;   --> data related to id=4 moved
+
+
+To delete specific rows from a table:
+DELETE FROM <table> WHERE <condition>;
+
+Examples:
+DELETE FROM users WHERE email = "andrew@teamtreehouse.com";
+DELETE FROM movies WHERE genre = "Musical";
+DELETE FROM products WHERE stock_count = 0;
+
+
+Questions
+What keyword would you use to remove rows from a table? 
+Delete
+
+DELETE FROM cereals WHERE name = "Frosted Flakes";
+
+Which keywords are used for creating rows in a table?
+INSERT INTO
