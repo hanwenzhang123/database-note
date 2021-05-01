@@ -1,0 +1,6 @@
+ORM stands for:
+Object Relational Mapping
+
+Which of these methods deletes an existing table each time you start your app, and recreates it from the model definition?
+sequelize.sync {{ forcee: true }}
+
