@@ -1,5 +1,5 @@
 Define a Model
-
+ 
 Overview
 Now that you've created a SQLite database, the next step is to create a database table. In this step, you will configure a Sequelize model to create a table that stores movie titles.
 
