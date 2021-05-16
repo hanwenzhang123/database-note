@@ -1,0 +1,15 @@
+https://mongoosejs.com/
+
+Object Data Modeling (ODM)
+Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node
+It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB.
+
+
+
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true, useUnifiedTopology: true});
+
+const Cat = mongoose.model('Cat', { name: String });
+
+const kitty = new Cat({ name: 'Zildjian' });
+kitty.save().then(() => console.log('meow'));
