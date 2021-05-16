@@ -43,7 +43,7 @@ Fruit.deleteOne({name: 'Peach'}, function(err){   //first parameter matches the 
   }
 });
 
-//human example
+//person example
 const personSchema = new mongoose.Schema ({ 
   name: String,
   age: Number
