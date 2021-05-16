@@ -1,1 +1,16 @@
+db.collection.deleteOne()
+db.collection.deleteMany()
 
+> db.cats.deleteOne({name: 'Blue Steele'})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.cats.find()
+
+> db.dogs.deleteMany({isAvailable: false})
+{ "acknowledged" : true, "deletedCount" : 2 }
+> db.dogs.find()
+{ "_id" : ObjectId("60a06de8afe237fd7dddf18c"), "name" : "Wyatt", "breed" : "Golden", "age" : 14, "catFriendly" : false }
+
+> db.dogs.deleteMany({})      //delete everything
+{ "acknowledged" : true, "deletedCount" : 1 }
+
+  
