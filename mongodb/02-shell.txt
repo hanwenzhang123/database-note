@@ -13,3 +13,5 @@ use {name of the database} - create database
 control c - leave the shell
 
  
+ 
+Data format using BSON
