@@ -1,5 +1,7 @@
 https://docs.mongodb.com/manual/tutorial/insert-documents/
-
+db.collection.insertOne() 
+db.collection.insertMany()
+db.collection.insert()		-> works for both
 
 > use animalShelter
 switched to db animalShelter
