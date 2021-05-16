@@ -1,0 +1,12 @@
+To delete all rows from a table:
+
+DELETE FROM <table>;
+
+Examples:
+DELETE FROM logs;
+DELETE FROM users;
+DELETE FROM products;
+
+All rows and column
+Delete all data
+You can not undo the delete

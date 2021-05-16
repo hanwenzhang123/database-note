@@ -1,0 +1,32 @@
+Databases with Frameworks
+Many developers, while using databases, aren't required to write a single line of SQL code. They use special software libraries called ORMs
+
+ORM - Object-Relational Mapping – used to perform CRUD operations with a language other than SQL.
+DML - Data Manipulation Language - the subset of the SQL programming language that deals with CRUD operations.
+
+Examples of ORMs:
+Hibernate for Java
+CoreData for Objective-C or Swift
+Django ORM for Python
+ActiveRecord for Ruby
+
+
+
+Question
+
+If you want to update or delete specific rows in a table, what keyword will you have to use?
+WHERE
+What is the keyword used to create rows in a database table? 
+INSERT
+What keyword is used to update values in a database table? 
+UPDATE
+What is the keyword used to read from a database? 
+SELECT
+What keyword is used to delete rows from a database table? 
+DELETE
+
+What does an ORM do?
+Provides a convenient way for developers to perform CRUD operations in their language of choice.
+
+What is a transaction?
+A safer way to perform multiple statements in one single go.

@@ -1,0 +1,42 @@
+Insert the value to the books table
+INSERT INTO books VALUES (16, "1984", "George Orwell", "Fiction", 1949)
+
+When we do not know the ID, we can use NULL to match the pattern, The id column is auto incrementing.
+INSERT INTO books VALUES (Null, "1984", "George Orwell", "Fiction", 1949)
+
+When we want to give an empty value, we can use NULL
+INSERT INTO loans VALUES (NULL, 2, 4, "2015-12-14", "2015-12-21", NULL)
+
+It would require the same order match the value and column order
+INSERT INTO loans (id, book_id, patron_id, loaned_on, return_by, return_on) VALUES (NULL, 2, 4, "2015-12-14", "2015-12-21", NULL)
+
+
+
+
+Inserting a single row:
+
+INSERT INTO <table> VALUES (<value 1>, <value 2>, ...);
+This will insert values in the order of the columns prescribed in the schema.
+
+Examples:
+
+INSERT INTO users VALUES  (1, "chalkers", "Andrew", "Chalkley");
+INSERT INTO users VALUES  (2, "ScRiPtKiDdIe", "Kenneth", "Love");
+
+INSERT INTO movies VALUES (3, "Starman", "Science Fiction", 1984);
+INSERT INTO movies VALUES (4, "Moulin Rouge!", "Musical", 2001);
+
+
+Inserting a single row with values in any order:
+
+INSERT INTO <table> (<column 1>, <column 2>) VALUES (<value 1>, <value 2>);
+INSERT INTO <table> (<column 2>, <column 1>) VALUES (<value 2>, <value 1>);
+
+Examples:
+
+INSERT INTO users (username, first_name, last_name) VALUES ("chalkers", "Andrew", "Chalkley");
+INSERT INTO users (first_name, last_name, username) VALUES  ("Kenneth", "Love", "ScRiPtKiDdIe");
+
+INSERT INTO movies (title, genre, year_released) VALUES ("Starman", "Science Fiction", 1984);
+INSERT INTO movies (title, year_released, genre) VALUES ("Moulin Rouge!", 2001,  "Musical");
+

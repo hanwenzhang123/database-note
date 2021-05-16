@@ -1,0 +1,25 @@
+Data isn't static, it changes over time. Databases allow you to modify that data over time.
+
+Four Main Data Operations
+Create - INSERT
+Read - SELECT
+Update - UPDATE
+Delete - DELETE
+
+
+Question
+What does the acronym CRUD stand for?
+Create, Read, Update, Delete
+
+Fill in the missing keywords:
+INSERT INTO tv_shows (show, network) VALUES ("Super Girl", "CBS");
+
+Given the database table imaged above, how would you complete this INSERT statement.
+INSERT INTO countries (population, name) VALUES (4596700, "New Zealand");
+
+How many rows will this statement insert in to the cars table?
+INSERT INTO cars (make, model) VALUES ("Fiat", "Fiat 500"),
+("Fiat", "Fiat Multipla"),
+("Cadillac", "Cadillac Fleetwood"),
+("Cadillac", "Cadillac Eldorado");
+4
