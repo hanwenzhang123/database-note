@@ -1,5 +1,10 @@
 db.collection.deleteOne()
-db.collection.deleteMany()
+db.collection.deleteMany
+
+use {the database you want to delete entirely)
+db.dropDatabase()  - delete the entire database
+show dbs    - the database is no longer exist
+
 
 > db.cats.deleteOne({name: 'Blue Steele'})
 { "acknowledged" : true, "deletedCount" : 1 }
