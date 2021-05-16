@@ -1,1 +1,21 @@
+db.dogs.find({'personality.childFriendly': true})   - to find a data that is nested in the BSON
 
+db.dogs.find({'personality.childFriendly': true, size: 'M'})
+db.dogs.find({'personality.childFriendly': true, age:10})
+
+
+Query and Projection Operators
+https://docs.mongodb.com/manual/reference/operator/query/
+
+$gt - greater than
+db.inventory.find( { qty: { $gt: 20 } } )
+
+$gte - >= greater equal than
+$ne - not equal
+$nin - not in
+
+$in - in
+$or - either or
+
+db.dogs.find({$or: [{'personality.childFriendly': true}, {age: {$lte:2}}]})
+ 
