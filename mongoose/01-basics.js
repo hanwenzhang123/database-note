@@ -58,7 +58,13 @@ const banana = new Fruit ({
   review: 'weird texture'
 });
 
-Fruit.insertMany();   //in order to save them in bulk
+Fruit.insertMany([kiwi, orange, banana], function(err){   //save data in bulk
+  if (err) {
+    console.log(err);
+  } else {
+    console.log('Successfully saved all the fruits to fruitsDB'); 
+  }
+});   
 
 
 //human example
