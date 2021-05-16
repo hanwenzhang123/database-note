@@ -1,4 +1,4 @@
-static method is the method that lives within the models itself but not in the instances
+static method is the method that lives within the models itself but not in the instances, built on top of existing model
 
 //{name of the schema}.statics.{name of the function} = function(){ // do something };
 
@@ -57,8 +57,8 @@ productSchema.methods.addCategory = function (newCat) {
     return this.save();
 }
 
-productSchema.statics.fireSale = function () {    //we modify the model itself
-    return this.updateMany({}, { onSale: true, price: 0 })
+productSchema.statics.fireSale = function () {    //we modify the model itself, keyword this refers to the model
+    return this.updateMany({}, { onSale: true, price: 0 })      //first parameter {} means for everything
 }
 
 
