@@ -1,0 +1,12 @@
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+
+xcode-select --install
+
+install homebrew - https://brew.sh/#install
+
+brew tap mongodb/brew
+
+brew install mongodb-community@4.4
+
+brew services start mongodb-community@4.4
+  
