@@ -1,9 +1,9 @@
 # database-note
 
-# mongoose
+## mongoose
 $npm install mongoose --save
 
-```
+```javascript
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/{name of the database}', {useNewUrlParser: true, useUnifiedTopology: true});
 
