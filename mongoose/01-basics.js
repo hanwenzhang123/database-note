@@ -7,7 +7,7 @@ It manages relationships between data, provides schema validation, and is used t
 $npm install mongoose --save
 
 //mongodb://localhost:27017/{name of the database}
-//Models are defined by passing a Schema instance to mongoose.model
+//Models like collections, are defined by passing a Schema instance to mongoose.model, schema is a blueprint
 
 
 //from the web
