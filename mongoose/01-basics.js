@@ -8,6 +8,7 @@ $npm install mongoose --save
 
 //mongodb://localhost:27017/{name of the database}
 //Models like collections, are defined by passing a Schema instance to mongoose.model, schema is a blueprint
+//you need to make a model after declaring the schema
 
 
 //from the web
@@ -30,7 +31,7 @@ const fruitSchema = new mongoose.Schema ({    // a new schema (blueprint)
   review: String
 });
 
-const Fruit = mongoose.model('Fruit', fruitSchema);    //auto convert to plural for collection and drop to lower case
+const Fruit = mongoose.model('Fruit', fruitSchema);    //pass in the name of the model, auto convert to plural for collection and drop to lower case
 
 const fruit = new Fruit ({  //create this document from the model we specified above
   name: 'Apple', 
@@ -67,7 +68,7 @@ Fruit.insertMany([kiwi, orange, banana], function(err){   //save data in bulk
 });   
 
 
-//human example
+//person example
 const personSchema = new mongoose.Schema ({ 
   name: String,
   age: Number
