@@ -4,7 +4,7 @@ https://mongoosejs.com/docs/api/model.html
 Object Data Modeling (ODM)
 Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node
 It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB.
-
+$npm install mongoose --save
 
 //mongodb://localhost:27017/{name of the database}
 //Models are defined by passing a Schema instance to mongoose.model
