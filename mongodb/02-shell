@@ -1,0 +1,15 @@
+mongo - start the shell
+
+command k - clear the terminal
+
+help - help document
+
+db - default database
+  
+show dbs/show databases - lookup
+
+use {name of the database} - create database
+
+control c - leave the shell
+
+ 
