@@ -1,0 +1,26 @@
+https://docs.mongodb.com/manual/reference/method/db.collection.find/
+
+> db.cats.find()
+{ "_id" : ObjectId("60a06e91afe237fd7dddf18e"), "name" : "Blue Steele", "age" : 6, "dogFriendly" : false, "breed" : "scottish fold" }
+> db.dogs.find()
+{ "_id" : ObjectId("60a06c3bafe237fd7dddf18b"), "name" : "Charlie", "age" : 3, "breed" : "corgi", "catFriendly" : true }
+{ "_id" : ObjectId("60a06de8afe237fd7dddf18c"), "name" : "Wyatt", "breed" : "Golden", "age" : 14, "catFriendly" : false }
+{ "_id" : ObjectId("60a06de8afe237fd7dddf18d"), "name" : "Tonya", "breed" : "Chihuahua", "age" : 17, "catFriendly" : true }
+
+
+> db.dogs.find({breed: 'corgi'})
+{ "_id" : ObjectId("60a06c3bafe237fd7dddf18b"), "name" : "Charlie", "age" : 3, "breed" : "corgi", "catFriendly" : true }
+
+> db.dogs.find({catFriendly: true})
+{ "_id" : ObjectId("60a06c3bafe237fd7dddf18b"), "name" : "Charlie", "age" : 3, "breed" : "corgi", "catFriendly" : true }
+{ "_id" : ObjectId("60a06de8afe237fd7dddf18d"), "name" : "Tonya", "breed" : "Chihuahua", "age" : 17, "catFriendly" : true }
+
+
+> db.dogs.findOne({catFriendly: true})    //only the s the first argument comes out
+{
+	"_id" : ObjectId("60a06c3bafe237fd7dddf18b"),
+	"name" : "Charlie",
+	"age" : 3,
+	"breed" : "corgi",
+	"catFriendly" : true
+}
