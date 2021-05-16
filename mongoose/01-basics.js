@@ -10,6 +10,7 @@ $npm install mongoose --save
 //Models like collections, are defined by passing a Schema instance to mongoose.model, schema is a blueprint
 //you need to make a model after declaring the schema
 
+//.then((data) => console.log(data));   //check the data
 
 //from the web
 const mongoose = require('mongoose');
