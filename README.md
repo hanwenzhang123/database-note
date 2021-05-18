@@ -1,8 +1,8 @@
 # database-note
 
-## Server Starting Code
+## Server Starting Code 
 
-```
+``` javascript
 //jshint esversion:6
 
 const express = require("express");
