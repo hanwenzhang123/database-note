@@ -38,7 +38,7 @@ const {somethingSchema} = new mongoose.Schema({
   review: String
 });
 
-const {name} = mongoose.model('{something}', somethingSchema);
+const {name} = new mongoose.model('{something}', somethingSchema);
 
 const {data} = new {name}({ {key}: {value} });
 
