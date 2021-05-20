@@ -1,8 +1,9 @@
-//medium amount 
-//two schemas here in this file
+//store your data seperately, not directly store the data, but then store references to document ID's somewhere inside the parent
+//medium amount data implementatiom; two schemas here in this file
 //usually define by somewhere else, embed the data like sql database 
 
 //https://mongoosejs.com/docs/populate.html
+
 
 const mongoose = require('mongoose');
 const { Schema } = mongoose;        //const Schema = mongoose.Schema
@@ -31,6 +32,7 @@ const farmSchema = new Schema({     //mongoose.Schema
     city: String,
     products: [{ type: Schema.Types.ObjectId, ref: 'Product' }]   //The ref option is what tells Mongoose which model to use during population, in our case the Product model. 
 })     //type: Schema.Types.ObjectId - configuration for a path in a schema, set to an array of ObjectIds
+//populate the different products to different farms
 
 const Product = mongoose.model('Product', productSchema);
 const Farm = mongoose.model('Farm', farmSchema);
@@ -41,10 +43,10 @@ const Farm = mongoose.model('Farm', farmSchema);
 //     { name: 'Asparagus', price: 3.99, season: 'Spring' },
 // ])
 
-const makeFarm = async () => {
+const makeFarm = async () => {      //one time function
     const farm = new Farm({ name: 'Full Belly Farms', city: 'Guinda, CA' });
     const melon = await Product.findOne({ name: 'Goddess Melon' });
-    farm.products.push(melon)
+    farm.products.push(melon)       //push to the product
     await farm.save()
     console.log(farm);
 }
@@ -52,13 +54,13 @@ const makeFarm = async () => {
 const addProduct = async () => {
     const farm = await Farm.findOne({ name: 'Full Belly Farms' });
     const watermelon = await Product.findOne({ name: 'Sugar Baby Watermelon' });
-    farm.products.push(watermelon);
+    farm.products.push(watermelon);     //only the ObjectId shows in the product, 2 IDs here in an array
     await farm.save();
     console.log(farm);
 }
 
 
 Farm.findOne({ name: 'Full Belly Farms' })
-    .populate('products')
+    .populate('products')       //populate the products module, now it will show with product information rather than id
     .then(farm => console.log(farm))
   
