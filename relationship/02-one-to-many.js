@@ -2,9 +2,10 @@
 //two schemas here in this file
 //usually define by somewhere else, embed the data like sql database 
 
+//https://mongoosejs.com/docs/populate.html
 
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const { Schema } = mongoose;        //const Schema = mongoose.Schema
 
 mongoose.connect('mongodb://localhost:27017/relationshipDemo', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
@@ -25,11 +26,11 @@ const productSchema = new Schema({
     }
 });
 
-const farmSchema = new Schema({
+const farmSchema = new Schema({     //mongoose.Schema
     name: String,
     city: String,
-    products: [{ type: Schema.Types.ObjectId, ref: 'Product' }]
-})
+    products: [{ type: Schema.Types.ObjectId, ref: 'Product' }]   //The ref option is what tells Mongoose which model to use during population, in our case the Product model. 
+})     //type: Schema.Types.ObjectId - configuration for a path in a schema, set to an array of ObjectIds
 
 const Product = mongoose.model('Product', productSchema);
 const Farm = mongoose.model('Farm', farmSchema);
