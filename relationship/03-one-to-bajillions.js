@@ -21,24 +21,35 @@ const userSchema = new Schema({
 const tweetSchema = new Schema({
     text: String,
     likes: Number,
-    user: { type: Schema.Types.ObjectId, ref: 'User' }
+    user: { type: Schema.Types.ObjectId, ref: 'User' }  
 })
 
 const User = mongoose.model('User', userSchema);
 const Tweet = mongoose.model('Tweet', tweetSchema);
 
-// const makeTweets = async () => {
-//     // const user = new User({ username: 'chickenfan99', age: 61 });
-//     const user = await User.findOne({ username: 'chickenfan99' })
-//     const tweet2 = new Tweet({ text: 'bock bock bock my chickens make noises', likes: 1239 });
-//     tweet2.user = user;
-//     tweet2.save();
-// }
+//example 1
+const makeTweets = async () => {
+     const user = new User({ username: 'chickenfan99', age: 61 });
+     const tweet1 = new Tweet({ text: 'bock bock bock my chickens make noises', likes: 12 });
+     tweet1.user = user;
+     user.save();
+     tweet1.save();     //user appears as object ID
+}
+    
+// makeTweets();
+
+//example 2
+ const makeTweets = async () => {
+     const user = await User.findOne({ username: 'chickenfan99' })
+     const tweet2 = new Tweet({ text: 'bock bock bock my chickens make noises', likes: 1239 });
+     tweet2.user = user;
+     tweet2.save();     //user appears as object ID
+}
 
 // makeTweets();
 
 const findTweet = async () => {
-    const t = await Tweet.find({}).populate('user')
+    const t = await Tweet.find({}).populate('user')  //populate the name of the field, now user has name and age || .populate('user', 'username') get the username 
     console.log(t);
 }
 
