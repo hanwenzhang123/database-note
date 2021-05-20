@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
     last: String,
     addresses: [
         {
-            _id: { id: false },
+            _id: { id: false },     //disable the id option
             street: String,
             city: String,
             state: String,
@@ -30,7 +30,7 @@ const makeUser = async () => {
         first: 'Harry',
         last: 'Potter'
     })
-    u.addresses.push({
+    u.addresses.push({      //push as many address as we want
         street: '123 Sesame St.',
         city: 'New York',
         state: 'NY',
@@ -40,7 +40,7 @@ const makeUser = async () => {
     console.log(res)
 }
 
-const addAddress = async (id) => {
+const addAddress = async (id) => {          //need to pass an id
     const user = await User.findById(id);
     user.addresses.push(
         {
@@ -54,4 +54,5 @@ const addAddress = async (id) => {
     console.log(res);
 }
 
+// makeUser();
 // addAddress('5f4426235f9f6233f9ed0996');
