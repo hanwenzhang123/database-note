@@ -61,6 +61,6 @@ const addProduct = async () => {
 
 
 Farm.findOne({ name: 'Full Belly Farms' })
-    .populate('products')       //populate the products module, now it will show with product information rather than id
+    .populate('products')       //populate the products field, now it will show with product information rather than id
     .then(farm => console.log(farm))
   
