@@ -1,0 +1,20 @@
+SQL PRIMARY KEY on CREATE TABLE
+
+CREATE TABLE Persons (
+    ID int NOT NULL PRIMARY KEY,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int
+);
+
+
+SQL PRIMARY KEY on ALTER TABLE
+
+ALTER TABLE Persons
+ADD CONSTRAINT PK_Person PRIMARY KEY (ID,LastName);
+
+
+DROP a PRIMARY KEY Constraint
+
+ALTER TABLE Persons
+DROP CONSTRAINT PK_Person;
