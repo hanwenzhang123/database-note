@@ -21,7 +21,7 @@ const userSchema = new Schema({
 const tweetSchema = new Schema({
     text: String,
     likes: Number,
-    user: { type: Schema.Types.ObjectId, ref: 'User' }  
+    user: { type: Schema.Types.ObjectId, ref: 'User' }  //foreign key
 })
 
 const User = mongoose.model('User', userSchema);
@@ -49,8 +49,8 @@ const makeTweets = async () => {
 // makeTweets();
 
 const findTweet = async () => {
-    const t = await Tweet.find({}).populate('user')  //populate the name of the field, now user has name and age || .populate('user', 'username') get the username 
-    console.log(t);
+    const t = await Tweet.find({}).populate('user')  //populate the name of the field, now user has name and age, have appropriate user fills in (previously just id)
+    console.log(t);                             //populate('user', 'username'), populate the user but only get the username 
 }
 
 findTweet();
