@@ -117,7 +117,7 @@ app.put('/products/:id', async (req, res) => {
 
 app.delete('/products/:id', async (req, res) => {
     const { id } = req.params;
-    const deletedProduct = await Product.findByIdAndDelete(id);     //findByIdAndDelete triggers and needs a middleware findOneAndDelete()
+    const deletedProduct = await Product.findByIdAndDelete(id);     //findByIdAndDelete triggers and needs a mongoose middleware findOneAndDelete()
     res.redirect('/products');
 })
 
