@@ -49,8 +49,8 @@ const makeTweets = async () => {
 // makeTweets();
 
 const findTweet = async () => {
-    const t = await Tweet.find({}).populate('user')  //populate the name of the field, now user has name and age, have appropriate user fills in (previously just id)
-    console.log(t);                             //populate('user', 'username'), populate the user but only get the username 
+    const t = await Tweet.find({}).populate('user')  //populate the name of the field (property) you want to populate, now user has name and age, have appropriate user fills in (previously just id)
+    console.log(t);                             //populate('user', 'username'), populate the user but only get the username object not others, restrict to names
 }
 
 findTweet();
