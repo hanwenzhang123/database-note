@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Product = require('./product');
+const Product = require('./product');       //need the product model
 const { Schema } = mongoose;
 
 const farmSchema = new Schema({
@@ -23,9 +23,9 @@ const farmSchema = new Schema({
 });
 
 // DELETE ALL ASSOCIATED PRODUCTS AFTER A FARM IS DELETED
-farmSchema.post('findOneAndDelete', async function (farm) {
+farmSchema.post('findOneAndDelete', async function (farm) {     //findByIdAndDelete 
     if (farm.products.length) {
-        const res = await Product.deleteMany({ _id: { $in: farm.products } })
+        const res = await Product.deleteMany({ _id: { $in: farm.products } })        // $in
         console.log(res);
     }
 })
