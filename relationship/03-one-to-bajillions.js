@@ -21,7 +21,7 @@ const userSchema = new Schema({
 const tweetSchema = new Schema({
     text: String,
     likes: Number,
-    user: { type: Schema.Types.ObjectId, ref: 'User' }  //foreign key
+    user: { type: Schema.Types.ObjectId, ref: 'User' }  //foreign key, the spelling inside of the ref must be the same with the model
 })
 
 const User = mongoose.model('User', userSchema);
