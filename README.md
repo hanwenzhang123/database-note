@@ -1,6 +1,6 @@
 # database-note
 
-## Server Starting Code 
+## Server Starting Mongoose Code 
 
 ``` javascript
 //jshint esversion:6
@@ -24,7 +24,7 @@ app.listen(3000, function() {
 });
 ```
 
-## mongoose
+## Mongoose Schema
 $npm install mongoose --save
 
 ```javascript
@@ -44,4 +44,11 @@ const {data} = new {name}({ {key}: {value} });
 
 {data}.save();
 
+```
+
+## SQLite
+```javascript
+const sqlite3 = require('sqlite3');
+
+const db = new sqlite3.Database('./db.sqlite');
 ```
