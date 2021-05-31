@@ -1,3 +1,17 @@
+//where col_name is the name of a column to match
+//$placeholder is filled in with the value associated with the $placeholder in the object provided as the second argument.
+
+db.get('SELECT * from TableName WHERE col_name = $placeholder',
+  {
+    $placeholder: 'some value'
+  },
+  (err, row) => {
+    // do something with results
+  }
+)
+
+
+
 const furLength1 = "short";
 const furLength2 = "long";
 const furColor1 = "brown";
