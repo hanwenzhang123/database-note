@@ -1,8 +1,9 @@
 //https://www.essentialsql.com/what-is-the-difference-between-a-join-and-a-union/
 //https://www.essentialsql.com/learn-to-use-union-intersect-and-except-clauses/
 
+Set operations allow you to perform different tasks on separate tables or datasets
+You can use these operations to combine two or more datasets into one in various ways or to limit the results of one with another.
 
-set operations
 - combine or limit results using two or more datasets
 
 union - stack together, need same column
@@ -10,10 +11,20 @@ union all - everything
 intersect - only return the value exist both
 except - only the record that is not matched in latter table
 
-
 Union and Union All combine data from multiple tables into one result set.
 Intersect produces a result set from values of rows that's are in common between both tables.
 Except produces a result set of values of rows that exist in the first table, but not the second.
+
+
+Syntax
+SELECT <column1>, <column2>
+FROM <table1>
+INNER JOIN <table2> ON <table1>.<column1> = <table2.><column1>
+<SET OPERATOR>
+SELECT <column1>, <column2>
+FROM <table3>
+WHERE <search criteria>
+ORDER BY <column2>;
 
 
 UNION - <query 1> UNION <query 2>
