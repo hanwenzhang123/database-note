@@ -1,0 +1,15 @@
+Replacing parts of text is handy for privacy concerns, standardization or improving output.
+
+
+To replace piece of strings of text in a larger body of text you can use the REPLACE() function.
+
+SELECT REPLACE(<original value or column>, <target string>, <replacement string>) FROM <table>;
+
+
+REPLACE(state, 'California', 'CA'); 
+
+SELECT * FROM adddresses      //search all the addresses in CA no matter how we entered it
+WHERE REPLACE(state, 'California', 'CA') = 'CA'
+
+SELECT street, city, REPLACE(state, 'California', 'CA'), zip FROM adddresses      //formatting to CA
+WHERE REPLACE(state, 'California', 'CA') = 'CA'
