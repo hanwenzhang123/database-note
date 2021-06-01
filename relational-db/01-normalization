@@ -3,6 +3,10 @@ https://www.databasestar.com/database-normalization/
 https://michaeljswart.com/2011/01/ridiculously-unnormalized-database-schemas-part-one/
 
 
+relational database are relational because the tables are connected by common attributes.
+The attributes are the columns with common data that link the rows of data together.
+
+
 Where does the term “relational databases” come from?
 Tables in a relational database are linked or related -- via fields that they have in common
 
