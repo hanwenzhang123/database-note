@@ -26,3 +26,8 @@ In this case you have 9 bananas, 2 pineapples, and 3 mango. Time for delicious s
 DISTINCT is used solely for giving you unique data. 
 GROUP BY will do the same behind the scenes.
 However, if you want to use an Aggregate function (e.g. SUM, MIN, MAX, COUNT, AVG) on the returned data then you must use GROUP BY.
+
+
+
+What keyword(s) would you use to help you count the number of rows with a shared value?
+GROUP BY
