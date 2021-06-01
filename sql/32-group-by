@@ -1,5 +1,5 @@
 It’s often handy to group rows together to count them. For example you could answer the question "How many books are in each genre?"
-
+GROUP BY is used to aggregate rows together.
 
 To count aggregated rows with common values use the GROUP BY keywords:
 
