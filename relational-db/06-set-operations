@@ -5,12 +5,35 @@
 set operations
 - combine or limit results using two or more datasets
 
-union
-union all
-intersect 
-except
+union - stack together, need same column
+union all - everything 
+intersect - only return the value exist both
+except - only the record that is not matched in latter table
 
 
 Union and Union All combine data from multiple tables into one result set.
 Intersect produces a result set from values of rows that's are in common between both tables.
 Except produces a result set of values of rows that exist in the first table, but not the second.
+
+
+UNION - <query 1> UNION <query 2>
+Use to combine two data sets into one, stacked one on top of the other, unlike an inner join which puts data together side by side.
+
+SEELECT MakeName FROM Make UNION SELECT MakeName FROM ForeignMake;
+
+SEELECT MakeID, MakeName FROM Make UNION SELECT ForeignMakeID, MakeName FROM ForeignMake;
+
+Union statement returns a distinct set based on the column specified so the ID can be the same but with a different MakeName here.
+
+
+UNION ALL - <query 1> UNION ALL <query 2>
+It is almost the same as UNION, but will not eliminate duplicates. 
+It will return all the value even it is duplicates
+
+
+INTERSECT - <query 1> INTERSECT <query 2>
+It is similar to an Inner Join. As with a UNION, they must have the same columns in both the left and right side of the SQL operation.
+
+
+EXCEPT - <query 1> EXCEPT <query 2>
+It uses the same format as INTERSECT, but outputs only the records that are not in the latter table.
