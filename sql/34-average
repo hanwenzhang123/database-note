@@ -1,0 +1,8 @@
+Averages are great for calculating averages of scores, reviews and sales.
+
+
+To get the average value of a numeric column use the AVG() function.
+
+SELECT AVG(<numeric column>) FROM <table>;
+SELECT AVG(<numeric column>) FROM <table> GROUP BY <other column>;
+ 
