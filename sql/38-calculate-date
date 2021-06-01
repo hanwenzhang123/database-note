@@ -1,0 +1,25 @@
+Calculating dates are great for generating reports and dashboards that are dynamic in nature.
+
+DATE(<time string>)
+DATE(<time string>, <modifier>)
+DATE(<time string>, <modifier>, <modifier>...)
+
+year first then the month then the date, recognized by SQL
+
+DATE('2016-02-01', '-7 days') //2016-01-25
+DATE('2016-02-01', '+7 days') //2016-02-08
+DATE('2016-02-01', '+2 months') //2016-04-01
+DATE('2016-02-01', '-21 years') //1995-02-01
+DATE('2016-02-01', '+1 month', '-1 day') //2016-02-29
+
+
+How many order happened in the last 7 days?
+SELCT COUNT (*) FROM orders WHERE ordered_on
+                BETWEEN DATE('now', '-7 days') AND DATE ('now', '-1 day');
+        //today is counting, today will be part of the 7 days, so we -1 here
+        //here is for 7 days ago and yesterday
+        
+How many order happened during the 7 day period 14 days ago? (the week just passed)
+SELCT COUNT (*) FROM orders WHERE ordered_on
+                BETWEEN DATE('now', '-7 days', '-7 days') 
+                AND DATE ('now', '-1 day', '-7 days');
