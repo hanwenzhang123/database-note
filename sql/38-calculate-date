@@ -23,3 +23,8 @@ How many order happened during the 7 day period 14 days ago? (the week just pass
 SELCT COUNT (*) FROM orders WHERE ordered_on
                 BETWEEN DATE('now', '-7 days', '-7 days')     //-14 days
                 AND DATE ('now', '-1 day', '-7 days');    //-8 days
+
+
+What will this date and modifier produce?
+DATE("now", "+1 day")
+'Tomorrow'
