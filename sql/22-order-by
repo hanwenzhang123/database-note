@@ -4,6 +4,10 @@ SELECT * FROM <table name> ORDER BY <column> [ASC|DESC];
 ASC is used to order results in ascending order. small to big
 DESC is used to order results in descending order. big to small
 
+The DESC keyword is used after the ORDER BY clause to order dates from the most recent to the furthest back in time.
+
+ASC - order from lowest to highest alphabetically or numerically, or oldest time to newest time
+DESC - vice versa
 
 Examples:
 
