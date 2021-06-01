@@ -5,6 +5,10 @@ To count aggregated rows with common values use the GROUP BY keywords:
 
 SELECT COUNT(<column>) FROM <table> GROUP BY <column with common value>;
 
+SELECT <function>(<column>), <column> FROM <table>
+ GROUP BY <column>
+ HAVING <aggregate function>;
+
 
 GROUP BY vs DISTINCT
 distinct - duplicate ones
