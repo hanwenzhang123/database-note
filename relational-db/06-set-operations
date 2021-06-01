@@ -37,3 +37,15 @@ It is similar to an Inner Join. As with a UNION, they must have the same columns
 
 EXCEPT - <query 1> EXCEPT <query 2>
 It uses the same format as INTERSECT, but outputs only the records that are not in the latter table.
+
+
+
+Review
+Which Set Operation is used to return only the results that are NOT in another table?
+EXCEPT
+
+Which Set Operation is used to find and return values that exist in two different data sets?
+INTERSECT
+
+Which Operator eliminates duplicates while combining multiple data sets into one result set?
+UNION
