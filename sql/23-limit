@@ -2,11 +2,15 @@ SQLite, PostgreSQL and MySQL
 To limit the number of results returned, use the LIMIT keyword.
 
 SELECT <columns> FROM <table> LIMIT <# of rows>;
+SELECT <columns> FROM <table> WHERE <condition> LIMIT <# of rows>;
+SELECT <columns> FROM <table> ORDER BY <column> ASC LIMIT <# of rows>;
+SELECT <columns> FROM <table> ORDER BY <column> DESC LIMIT <# of rows>;
+
+
 MS SQL
 To limit the number of results returned, use the TOP keyword.
-
 SELECT TOP <# of rows> <columns> FROM <table>;
+
 Oracle
 To limit the number of results returned, use the ROWNUM keyword in a WHERE clause.
-
 SELECT <columns> FROM <table> WHERE ROWNUM <= <# of rows>;
