@@ -1,0 +1,16 @@
+//https://www.essentialsql.com/what-is-the-difference-between-a-join-and-a-union/
+//https://www.essentialsql.com/learn-to-use-union-intersect-and-except-clauses/
+
+
+set operations
+- combine or limit results using two or more datasets
+
+union
+union all
+intersect 
+except
+
+
+Union and Union All combine data from multiple tables into one result set.
+Intersect produces a result set from values of rows that's are in common between both tables.
+Except produces a result set of values of rows that exist in the first table, but not the second.
