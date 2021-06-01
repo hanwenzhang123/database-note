@@ -1,0 +1,20 @@
+It’s often handy to group rows together to count them. For example you could answer the question "How many books are in each genre?"
+
+
+To count aggregated rows with common values use the GROUP BY keywords:
+
+SELECT COUNT(<column>) FROM <table> GROUP BY <column with common value>;
+
+
+GROUP BY vs DISTINCT
+distinct - duplicate ones
+group - group rows together so you can use functions like counts
+
+
+SELECT category, COUNT(*) AS "product count" FROM products GROUP BY category;
+
+Think of a fruit basket filled with mango, pineapples, and bananas. 
+Now you want to count how many mango, pineapples, and bananas you have, because you feel like having a smoothie party. 
+You would do this by separating or GROUPing each piece of fruit to count how many you have. 
+In this case you have 9 bananas, 2 pineapples, and 3 mango. Time for delicious smoothies!
+ 
