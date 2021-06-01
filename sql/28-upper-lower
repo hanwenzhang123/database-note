@@ -6,3 +6,6 @@ SELECT UPPER(<value or column>) FROM <table>;
 Use the LOWER() function to lowercase text.
 
 SELECT LOWER(<value or column>) FROM <table>;
+
+
+SELECT UPPER(zip) FROM addresses WHERE country = 'UK';
