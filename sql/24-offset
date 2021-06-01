@@ -1,0 +1,12 @@
+Limiting just by the top set of results is a fine thing, but let's say you wanted to generate a multi page report. Having a blog archive or listing search results in batches of 50 is where you want paging.
+
+SQLite, PostgreSQL and MySQL
+To page through results you can either use the OFFSET keyword in conjunction with the LIMIT keyword or just with LIMIT alone.
+
+SELECT <columns> FROM <table> LIMIT <# of rows> OFFSET <skipped rows>;
+SELECT <columns> FROM <table> LIMIT <skipped rows>, <# of rows>; 
+
+MS SQL and Oracle
+To page through results you can either use the OFFSET keyword in conjunction with the FETCH keyword. Cannot be used with TOP.
+
+SELECT <columns> FROM <table> OFFSET <skipped rows> ROWS FETCH NEXT <# of rows> ROWS ONLY;
