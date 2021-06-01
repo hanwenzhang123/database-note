@@ -1,0 +1,23 @@
+Calculating grand totals are handy for answering questions like "How much was spent today on the site?" and "What are the total number of goals scored by a particular team?"
+
+To total up numeric columns use the SUM() function.
+
+SELECT SUM(<numeric column) FROM <table>;
+SELECT SUM(<numeric column) AS <alias> FROM <table>
+                                       GROUP BY <another column>
+                                       HAVING <alias> <operator> <value>(condition)   //using HAVING like WHERE in aggregate function, it has to happen after the group by and before the order by
+                                       ORDER BY <column>;
+                                       
+                                       
+                                       
+For some examples, let's say you have dogs in a database, for each you have a name, age, and breed. Now if you wanted to see all the entries for a particular breed ("pug" for example), you might do this:
+SELECT * from dogs WHERE breed = 'pug';
+
+But if you wanted to see how many dogs you had of each breed, listing each breed only once, you might do this:
+SELECT breed, count(*) AS total from dogs GROUP BY breed;
+
+Then, if you wanted to do the same thing, but only list the breeds where you had exactly 10 dogs of that type:
+SELECT breed, count(*) AS total from dogs GROUP BY breed HAVING count(*) = 10;
+
+And finally, if you wanted that same list sorted by breed (alphabetically):
+SELECT breed, count(*) AS total from dogs GROUP BY breed HAVING count(*) = 10 ORDER BY breed;
