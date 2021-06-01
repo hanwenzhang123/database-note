@@ -1,0 +1,34 @@
+relational database are relational because the tables are connected by common attributes.
+The attributes are the columns with common data that link the rows of data together.
+These special columns are called keys.
+Database keys aren't only used for relating data together.
+Some keys guarantee that each row is distinct from one another.
+
+
+Unique Keys
+- can be null
+- multiple unique keys per table
+- can be modified to a new value
+Unique Keys are specifically configured so that no value can be repeated within it.
+
+
+Primary Key
+- May never be null
+- One primary key per table
+- Cannot be modified to a new value
+Primary Keys are one of the most important aspects of good database design.
+Most of what you will find about Primary Keys will pertain to most or all database platforms, but there may be some minor differences in how they are implemented and how they behave on disk.
+
+
+Foreign Keys
+- columns designed correctly
+- foreign key constraint
+Foreign Keys are a column, or columns, that relate records back to the primary key in another table.
+
+constraint
+- a rule of a database enforces
+
+referential integrity
+- foreign key values must also exist as a primary key value in the reference table
+
+
