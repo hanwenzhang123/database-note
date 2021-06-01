@@ -18,3 +18,7 @@ Now you want to count how many mango, pineapples, and bananas you have, because 
 You would do this by separating or GROUPing each piece of fruit to count how many you have. 
 In this case you have 9 bananas, 2 pineapples, and 3 mango. Time for delicious smoothies!
  
+ 
+DISTINCT is used solely for giving you unique data. 
+GROUP BY will do the same behind the scenes.
+However, if you want to use an Aggregate function (e.g. SUM, MIN, MAX, COUNT, AVG) on the returned data then you must use GROUP BY.
