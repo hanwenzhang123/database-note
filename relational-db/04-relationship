@@ -1,0 +1,18 @@
+One to Many Relationships 
+means that one row in one table can be related to many rows in another table at the other side of the relationship, but not vice versa. 
+The many can only happen in one direction.
+
+Many to Many relationships 
+means that a record in one table can relate to many other records in another table, and one record from the second table can also relate back to many records in the first table.
+It is just two one to many relationships with a junction table.
+
+A “One to one” relationship 
+between two tables means that a row in one table can only relate to one row in the table on the other side of their relationship and vice versa. 
+This is the least common database relationship.
+
+The models that database designers create are called Entity Relationship Diagrams, because they are intended to model the way tables will eventually relate to each other in the finished database.
+
+
+What do we do to handle a Many to Many relationship between tables during the design process?
+Add a third table between the original two tables
+
