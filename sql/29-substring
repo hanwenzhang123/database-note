@@ -1,0 +1,10 @@
+substring - a smaller string form another string
+
+
+To create smaller strings from larger piece of text you can use the SUBSTR() funciton or the substring function.'
+
+SELECT SUBSTR(<value or column>, <start>, <length>) FROM <table>;
+
+require start and length
+
+SELECT name SUBSTR(description, 1, 50) || '...' AS short_description, price FROM products;
