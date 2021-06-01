@@ -6,3 +6,6 @@ To get the average value of a numeric column use the AVG() function.
 SELECT AVG(<numeric column>) FROM <table>;
 SELECT AVG(<numeric column>) FROM <table> GROUP BY <other column>;
  
+ 
+What function would I use in conjunction with AVG() to fix any remainders after the decimal place?
+ROUND();
