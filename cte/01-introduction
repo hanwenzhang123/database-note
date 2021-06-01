@@ -1,0 +1,36 @@
+Common Table Expressions Using WITH
+
+What is a Common Table Expression?
+CTE is a results set
+
+CTE Benefits
+- makes queries easier to read
+- organizes queries into reusable modules
+- better matches how you think about data analysis
+
+
+Example Code
+
+Basic Common Table Expression
+WITH product_details AS (  
+  SELECT ProductName, CategoryName, UnitPrice, UnitsInStock
+  FROM Products
+  JOIN Categories ON PRODUCTS.CategoryId = Categories.Id
+  WHERE Products.Discontinued = 0   //means that the product still sells
+)
+SELECT * FROM product_details
+ORDER BY 2, 1
+
+
+
+Basic Common Table Expression Expanded
+WITH product_details AS (  
+  SELECT ProductName, CategoryName, UnitPrice, UnitsInStock
+  FROM Products
+  JOIN Categories ON PRODUCTS.CategoryId = Categories.Id
+  WHERE Products.Discontinued = 0
+)
+SELECT CategoryName, COUNT(*) AS unique_product_count, SUM(UnitsInStock) AS stock_count
+FROM product_details
+GROUP BY 1
+ORDER BY 2
