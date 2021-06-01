@@ -1,0 +1,20 @@
+https://en.wikipedia.org/wiki/Database_normalization#Example_of_a_step_by_step_normalization
+https://www.databasestar.com/database-normalization/
+https://michaeljswart.com/2011/01/ridiculously-unnormalized-database-schemas-part-one/
+
+
+Where does the term “relational databases” come from?
+Tables in a relational database are linked or related -- via fields that they have in common
+
+When were relational databases first conceptualized?
+The 1970s
+
+Which of these is a benefit of a relational database?
+Elimates data modification anomalies and increase data integrity
+Saves disk space as much as possible
+
+What is Normalization?
+The process of designing a relational database
+
+Which CRUD operation benefits most from a well normalized database design?
+All
