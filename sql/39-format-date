@@ -16,3 +16,7 @@ STRFTIME(%d/%m/%Y, '2015-04-01 23:12:01', <modifier>)
 
 STRFTIME(%d/%m/%Y, '2015-04-01 23:12:01',  '+1 year')
   --> '01/04/2016'
+
+
+SELECT *, STRFTIME(%d/%m/%Y, ordered_on) AS UK_date FROM orders;    //format the ordered_on date
+  
