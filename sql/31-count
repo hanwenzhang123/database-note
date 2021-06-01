@@ -1,0 +1,21 @@
+Counting the number of rows is great for answering questions such as "How many users do we have?" and "How many sales happened this week?".
+
+To count rows you can use the COUNT() function.
+SELECT COUNT(*) FROM <table>;
+
+To count unique entries use the DISTINCT keyword too:
+SELECT COUNT(DISTINCT <column>) FROM <table>;
+
+count()
+- total number of rows
+- results of a query
+- distinct entries
+- aggregates
+
+
+Only count non-null values
+
+SELECT COUNT(*) FROM products where category = 'Clothing';
+
+SELECT DISTINCT category FROM products; //select all the unique ones
+SELECT COUNT(DISTINCT category) FROM products;  //count all the unique ones
