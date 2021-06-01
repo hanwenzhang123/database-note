@@ -1,0 +1,12 @@
+Mathematical Operators
+* Multiply
+/ Divide
++ Add
+- Subtract
+SELECT <numeric column> <mathematical operator> <numeric value> FROM <table>;
+
+SELECT name, ROUND(price * 1.06, 2) AS 'Price in FL' FROM products;
+
+ROUND(<value>, <decimal places>)
+the 2 above inside the round means 2 decimal number like 11.65
+ 
