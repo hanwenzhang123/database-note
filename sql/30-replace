@@ -13,3 +13,8 @@ WHERE REPLACE(state, 'California', 'CA') = 'CA'
 
 SELECT street, city, REPLACE(state, 'California', 'CA'), zip FROM adddresses      //formatting to CA
 WHERE REPLACE(state, 'California', 'CA') = 'CA'
+
+
+
+What is the correct way of using the REPLACE() function for replacing "javascript" with "JavaScript" ?
+SELECT REPLACE("I can't capitalize javascript correctly!", "javascript", "JavaScript");
