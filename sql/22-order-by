@@ -1,9 +1,9 @@
 Ordering by a single column criteria:
 SELECT * FROM <table name> ORDER BY <column> [ASC|DESC];
 
-ASC is used to order results in ascending order.
+ASC is used to order results in ascending order. small to big
+DESC is used to order results in descending order. big to small
 
-DESC is used to order results in descending order.
 
 Examples:
 
