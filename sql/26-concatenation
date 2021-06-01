@@ -1,0 +1,18 @@
+cancatenation - link things together in a chain or series.
+
+Use the concatenation operator ||.
+SELECT <value or column> || <value or column> || <value or column>  FROM <table>; 
+<value or column> || <value or column> AS <alias>
+
+
+SELECT first_name || ' ' || last_name AS 'Full Name'
+
+
+
+MS SQL
+Use the concatenation operator +.
+SELECT <value or column> + <value or column> + <value or column>  FROM <table>;  
+
+MySQL, Postgres and MS SQL
+Use the CONCAT() function.
+SELECT CONCAT(<value or column>, <value or column>, <value or column>) FROM <table>;
