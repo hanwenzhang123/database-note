@@ -17,3 +17,7 @@ MS SQL and Oracle
 To page through results you can either use the OFFSET keyword in conjunction with the FETCH keyword. Cannot be used with TOP.
 
 SELECT <columns> FROM <table> OFFSET <skipped rows> ROWS FETCH NEXT <# of rows> ROWS ONLY;
+
+
+
+OFFSET is a keyword that can be used in conjunction with LIMIT to page through results.
