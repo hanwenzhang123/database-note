@@ -1,0 +1,8 @@
+Use the UPPER() function to uppercase text.
+
+SELECT UPPER(<value or column>) FROM <table>;
+
+
+Use the LOWER() function to lowercase text.
+
+SELECT LOWER(<value or column>) FROM <table>;
