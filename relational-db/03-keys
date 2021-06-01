@@ -32,3 +32,16 @@ referential integrity
 - foreign key values must also exist as a primary key value in the reference table
 
 
+
+What data type does a primary key have to be?
+as long as the value guarantees uniqueness
+
+A Primary Key will not allow NULL value.
+
+What are Foreign Keys?
+They are columms that contain data which relate to the primary key in another table
+
+The thing that defines the physical relationship between two tables in a database is called:
+Foreign Key Constraint
+
+If NO Foreign Key Constraint exists between two tables, it is possible to accidentally record data in a foreign key column that does not have a matching value in the primary key table.
