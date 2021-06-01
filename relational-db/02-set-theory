@@ -1,1 +1,22 @@
+Intersect
+apple people
+banana people 
+apple and banana people
+
+Union 
+apple people
+banana people 
+all people
+
+Except
+apple people
+banana people 
+only 1 fruit people
+
+
+What is a “Set”?
+A collection of things that have common properties
+
+What is the name of the type of diagram that represents a set?
+Venn Diagram
 
