@@ -1,0 +1,53 @@
+A subquery is a query that is used in conjunction with another query.
+Usually for the purposes of defining or narrowing the results of the data returned by the main query.
+
+Subquery Scenarios - using ()
+- criteria for a where clause is not specifically known
+- you need a temporary dataset to join with other tables in your database
+
+
+Syntax 1
+SELECT <Columns>
+FROM <Table1>
+WHERE Column1 IN (
+  SELECT <Column1>      // you can only select one column in your subquery
+  FROM <Table2>
+  WHERE <Search Criteria>
+);
+When using a subquery as part of an in statement you can put any valid statement in parenthesis and the query puzzle will limit the results of the outer query to the values that are returned by the subquery.
+The key to this approach is that the subquery can only return one column via the SELECT clause.
+The number of ways that you construct to derive tables is only limited by your imagination.
+
+
+Syntax 2
+SELECT <Columns>
+FROM <Table>
+<INNER | OUTER> JOIN
+(SELECT <Columns> FROM <Table> WHERE <Search Criteria> AS <Alias> on <Join Criteria>;
+
+They sample syntax here only represents one possible way to use a derived table but the things that apply every time you create a template table include, you have to use parentheses just like any other subquery. 
+You need to alias the derived table so that the outer query can reference it. The subquery is part of the FROM of the outer query and you can join to it just like any other table.
+  
+  
+  
+Using IN with Subqueries to Filter Data
+Using subquerires in conjunction with the IN clause.
+
+SELECT <Columns> FROM <Table1> WHERE Column1 IN (SELECT column1> FROM <table2> WHERE <search criteria>);
+
+SELECT * FROM Sale WHERE CarID NOT IN (SELECT CarID FROM Car WHERE ModelYear = 2015);
+
+
+
+Review
+Why must a derived table be aliased?
+Being a temporary object, it has no other name and thus the database wouldn’t be able to reference its resulting data set.
+
+When using a subquery to filter your outer query, you use what SQL keyword?
+IN
+
+When creating derived / temporary tables, your subquery belongs in which section of the query:
+FROM
+
+When using IN with a subquery, you can only select ONE column in the Subquery.
+When using a subquery to create a derived table, you can select more than one column in the Subquery.
