@@ -1,0 +1,27 @@
+JOIN
+- combine data from two or more tables
+
+A join is the instruction to the query engine on how to relate records in one table to records in another.
+
+INNER JOINs are the backbone of advanced SQL querying. There are literally thousands of books, articles and blog posts with examples and information about SQL joins.
+- return only the data that exists in both tables
+
+Three Types of Outer Joins:
+Left - the one you selected go first
+Right
+Full
+
+SELECT <columns>
+FROM <table1>
+LEFT JOIN <table2> ON <equality criteria>
+INNER JOIN <table3> ON <equality criteria>
+WHERE <search criteria>
+
+
+A left outer join returns all data from the first -- or left -- table and only the data with matches in the second table.
+
+What is a JOIN?
+It is how a SQL query combines data from two tables into one result set.
+
+Where does the INNER JOIN clause go in a SQL statement?
+After FROM clause but before WHERE clause
