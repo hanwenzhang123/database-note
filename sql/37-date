@@ -1,6 +1,7 @@
 SELECT * FROM orders WHERE status = 'placed' AND ordered_on = DATE('now')   //get all the today's orders
 
-
+If today was the 8th July 2018, how would I write that date in SQLite/SQL Playground?
+'2018-07-08'
 
 SQLite
 To get the current date use: DATE("now")    //today's date
@@ -35,3 +36,6 @@ To get the current date use: CURRENT_DATE
 To get the current time use: CURRENT_TIME
 
 To get the current date time: `CURRENT_TIMESTAMP
+
+
+
