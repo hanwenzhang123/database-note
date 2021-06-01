@@ -18,3 +18,9 @@ The process of designing a relational database
 
 Which CRUD operation benefits most from a well normalized database design?
 All
+
+
+Relationship Database Benefits
+- maximizing storage
+- better application functionality
+- cleaner richer data for business reporting
