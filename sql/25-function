@@ -1,0 +1,15 @@
+Syntax definitions
+Keywords: Commands issued to a database. The data presented in queries is unaltered.
+
+Operators: Performs comparisons and simple manipulation
+
+Functions: Presents data differently through more complex manipulation
+
+
+A function looks like:
+<function name>(<value or column>)
+
+Example:
+UPPER("Andrew Chalkley") 
+
+
