@@ -1,1 +1,18 @@
+Date data types
+date
+time
+datetime
 
+
+Formatting Dates For Reporting - STRFTIME()
+
+STRFTIME(<format string>, <time string>, <modifier>)
+  --> '01/04/2015'
+
+STRFTIME(<format string>, '2015-04-01 23:12:01', <modifier>)
+
+STRFTIME(%d/%m/%Y, '2015-04-01 23:12:01', <modifier>)
+  --> '01/04/2015'
+
+STRFTIME(%d/%m/%Y, '2015-04-01 23:12:01',  '+1 year')
+  --> '01/04/2016'
