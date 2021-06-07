@@ -6,7 +6,7 @@ When using the build() method, you must call ____ to store an instance in the da
 .save()
 
 
-Which method automatically stores your instance's data once called?
+Which method automatically stores your instance data once called?
 .create()
 
 
@@ -41,3 +41,5 @@ await Book.findAll({
   },
  order: [['publishDate', 'DESC']]
 });
+
+ 
