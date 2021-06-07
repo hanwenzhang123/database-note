@@ -1,0 +1,15 @@
+Which of the following best describes a relational database?
+A database where items are organized as tables, allowing you to connect data in relation to other data in the database.
+
+The process of splitting related or duplicated data in a table into separate tables is called:
+Normalization
+
+When designing an application's database, it's common to start by listing all of the items that the application will be working with—all of the "nouns".
+True. You can describe the data for your application using the nouns that you've identified. You represent those nouns in your database using multiple tables.
+
+Creating data relationships can save storage space and makes updating data more efficient.
+True. Imagine having to update each row holding the data you want to change. You can do it all in one place with data relationships.
+
+Which of the following best describes a one-to-many relationship?
+One record in a table can be associated with one or more records in another table.
+   
